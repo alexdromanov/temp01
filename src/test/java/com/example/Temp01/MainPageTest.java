@@ -37,7 +37,6 @@ public class MainPageTest {
         $("#subjectsInput").setValue("Physics").pressEnter();
         $("[for='hobbies-checkbox-3']").click();
         $("#uploadPicture").uploadFromClasspath("tst.jpg");
-        //$("#state").doubleClick();
         $("#currentAddress").setValue("Ostankinskaya street, Moscow, Russia");
         $("#react-select-3-input").setValue("ncr").pressEnter();
         $("#react-select-4-input").setValue("delhi").pressEnter();

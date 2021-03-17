@@ -6,7 +6,9 @@ import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+
 import java.io.File;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selectors.byText;
@@ -14,7 +16,6 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class MainPageTest {
-
 
 
     @Test
@@ -33,13 +34,13 @@ public class MainPageTest {
         $(".react-datepicker__month-select").selectOptionByValue("7");
         $(".react-datepicker__year-select").selectOptionByValue("1982");
         $("[aria-label='Choose Tuesday, August 17th, 1982']").click();
-        $("#subjectsInput").setValue("Tests");
+        $("#subjectsInput").setValue("Physics").pressEnter();
         $("[for='hobbies-checkbox-3']").click();
         $("#uploadPicture").uploadFromClasspath("tst.jpg");
         //$("#state").doubleClick();
         $("#currentAddress").setValue("Ostankinskaya street, Moscow, Russia");
         $("#react-select-3-input").setValue("ncr").pressEnter();
-        $("#react-select-4-input").setValue("delhi").pressEnter();;
+        $("#react-select-4-input").setValue("delhi").pressEnter();
         $("#submit").click();
         $(".table-responsive").shouldHave(text("Alex"),
                 text("Rom"),
@@ -47,7 +48,7 @@ public class MainPageTest {
                 text("Male"),
                 text("7929636225"),
                 text("17 August,1982"),
-                text("Tests"),
+                text("Physics"),
                 text("Music"),
                 text("tst.jpg"),
                 text("Ostankinskaya street, Moscow, Russia"),

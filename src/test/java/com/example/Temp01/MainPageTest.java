@@ -12,8 +12,7 @@ import java.io.File;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class MainPageTest {
 
@@ -41,6 +40,7 @@ public class MainPageTest {
         $("#react-select-3-input").setValue("ncr").pressEnter();
         $("#react-select-4-input").setValue("delhi").pressEnter();
         $("#submit").click();
+        sleep(8000);
         $(".table-responsive").shouldHave(text("Alex"),
                 text("Rom"),
                 text("aa@aa.cz"),

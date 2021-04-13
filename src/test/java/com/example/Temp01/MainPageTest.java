@@ -18,7 +18,7 @@ public class MainPageTest {
 
 
     @Test
-    void TestWithSearchAllForms() {
+    void testWithSearchAllForms() {
         Configuration.startMaximized = true;
 
         open("https://demoqa.com/automation-practice-form");
@@ -40,8 +40,7 @@ public class MainPageTest {
         $("#react-select-3-input").setValue("ncr").pressEnter();
         $("#react-select-4-input").setValue("delhi").pressEnter();
         $("#submit").click();
-        sleep(8000);
-        $(".table-responsive").shouldHave(text("Alex"),
+                $(".table-responsive").shouldHave(text("Alex"),
                 text("Rom"),
                 text("aa@aa.cz"),
                 text("Male"),
